@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Dance Academy</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="log">
+            <img src="./assests//logo.jpg" class="logo">
+            <div class="logos">Zen Dance Academy</div>
+        </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#dance-classes" onclick="toggleMenu()">Classes</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+   
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="./assests/c1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="./assests/c21.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/assests/c3.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/assests/c4.jpg" alt="Image 4">
+            </div>
+        </div>
+        <button class="prev bu" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next bu" onclick="changeSlide(1)">&#10095;</button>
+       
+    </div>
+    <hr/>
+    <section id="about">
+        <h2>About Us</h2>
+        <em><p>Welcome to Zen Dance Academy, where we teach diverse dance styles for all age groups. Our passionate instructors are dedicated to fostering creativity and confidence in every dancer. Join us to learn, enjoy, and express yourself through dance while making lasting friendships in a supportive environment!</p></em>
+    </section>
+    <hr/>
+
+    <section id="dance-classes">
+        <h2>Our Dance Classes</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Hip Hop</h3>
+                <hr/>
+                <img src="./assests//hip.jpg" class="imc">
+
+                <p>Get ready to move with energy and style in our Hip Hop classes.</p>
+            </div>
+            <div class="card">
+                <h3>Classic</h3>
+                <hr/>
+                <img src="./assests//brat.png" class="imc">
+                <p>Explore the elegance of classical dance forms with our experienced instructors.</p>
+            </div>
+            <div class="card">
+                <h3>Traditional</h3>
+                <hr/>
+                <img src="./assests//tra.jpg" class="imc">
+                <p>Experience the rich heritage of traditional dances from around the world.</p>
+            </div>
+            <div class="card">
+                <h3>Jazz</h3>
+                <hr/>
+                <img src="./assests//j.webp" class="imc">
+                <p>Join our lively Jazz classes and express your creativity through movement.</p>
+            </div>
+            <div class="card">
+                <h3>Ballet</h3>
+                <hr/>
+                <img src="./assests//bal.jpg" class="imc">
+                <p>Learn the foundations of dance with our Ballet classes suitable for all levels.</p>
+            </div>
+            <div class="card">
+                <h3>Contemporary</h3>
+                <hr/>
+                <img src="./assests//com.jpg" class="imc">
+                <p>Discover your own style with our Contemporary dance classes.</p>
+            </div>
+        </div>
+    </section>
+     <hr/>
+
+    <section id="contact">
+        <h2>Message to Us</h2>
+        <div class="con">
+        <h3>Contact Us</h3>
+        <hr/>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Your Number" required>
+            <textarea placeholder="Your Message" required></textarea>
+           <button class="bt" >Send Message</button>
+        </form>
+    </div>
+    </section>
+
+    <footer>
+        <div class="foot">
+            <div class="add">
+            <p>Address: 123 Dance St, Rhythm City</p>
+            <p>Contact: (123) 456-7890</p>
+            <p>Follow us on social media!</p>
+        </div>
+        <hr/>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="copyright">
+            <p>&copy; 2024 Zen Dance Academy. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: azure;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: violet;
+    color: white;
+}
+
+nav {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: crimson;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+
+
+.nav-links li {
+    font-size: small;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.nav-links a {
+    
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    
+    color: black;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: wheat;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 300px;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: crimson;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-links li {
+        font-size: small;
+        margin:  0.7rem 0.9rem;
+       
+    }
+    .nav-links li:hover {
+        font-size: small;
+        margin:  0.7rem 0.9rem;
+       color: black;
+       
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+}
+
+
+.bu {
+    background-color: rgba(220, 20, 60, 0.623);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 10px; /* Position left button */
+}
+
+.next {
+    right: 10px; /* Position right button */
+}
+
+
+/* Styles for larger screens */
+.slider {
+    filter: brightness(0.6);
+    position: relative;
+    width: 80%;
+    height: 380px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 780px) {
+    .slider {
+        width: 90%; /* Make the slider more flexible */
+        height: 150px; /* Adjust height for smaller screens */
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .prev, .next {
+        padding: 0.3rem 0.7rem;
+        font-size: 14px;
+    }
+
+    .co {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        z-index: 9;
+        color: white;
+    }
+}
+
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.imc{
+    box-shadow: 2px 2px 5px;
+    border-radius: 15px;
+    border: none;
+    margin-top:5px ;
+    height: 150px;
+    width: 220px;
+    
+}
+.co{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    z-index: 9;
+    color: white;
+   
+}
+
+.con{
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+   background-color: crimson;
+    border: 1px solid crimson;
+    box-shadow: 2px 2px 10px;
+    
+}
+
+.bt{
+    border-radius: 5px;
+    background-color: rgb(134, 11, 36);
+    color: white;
+    padding: 8px 35px;
+    margin: 20px;
+
+}
+
+.logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.log{
+    display: flex;
+    text-align: left;
+    justify-content: start;
+   
+}
+.logos{
+    font-size: large;
+        margin: 0 10px;
+        font-weight: bold;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.social-media a {
+    color: #fff;
+    margin:  5px 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.social-media a:hover {
+    color: crimson;
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 8px;
+    opacity: 0.8;
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    margin:  10px 0 10px 0;
+    padding: 0;
+  
+}
+.add{
+    margin:  10px 0;
+}
+
+.bu:hover{
+    background-color: rgb(250, 3, 52)
+}
+.bt:hover{
+    background-color: rgb(252, 246, 247);
+    color: crimson;
+}
+h3{
+    margin-top: 10px;
+}
+h2{
+    margin-bottom: 10px;
+}
